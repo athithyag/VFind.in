@@ -1,0 +1,307 @@
+/* Grid Margin Styles */
+.grid-margin {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 992px) {
+  .grid-margin {
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: 756px) {
+  .grid-margin {
+    margin-bottom: 60px;
+  }
+}
+
+.grid-margin-lg-0 {
+  /* Applies margin-bottom: 0px only on large screens and above */
+}
+
+@media (min-width: 992px) {
+  .grid-margin-lg-0 {
+    margin-bottom: 0px;
+  }
+}
+
+/* Stretch Card Styles */
+.stretch-card {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.stretch-card .card {
+  width: 100%;
+  min-width: 100%;
+}
+
+
+
+/* Ensures proper spacing for the contact-details within grid */
+.contact-details .grid-margin {
+  margin-bottom: 100px; /* Keeps vertical spacing */
+  margin-left: 20px;    /* Adds space between each column */
+  margin-right: 20px;   /* Optional, to keep even spacing on both sides */
+}
+
+@media (max-width: 992px) {
+  .grid-margin {
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: 756px) {
+  .grid-margin {
+    margin-bottom: 60px;
+    margin-left: 0;    /* Remove side margins for smaller screens */
+    margin-right: 0;
+  }
+}
+
+.contact-details {
+  padding-left: 30px; /* Adjust this value to move the section right */
+  padding-right: 30px; /* Adjust this value if needed */
+}
+
+/* Add space between the third and fourth columns */
+.grid-margin.d-flex.justify-content-end {
+  margin-left: 30px; /* Adjust this value to your needs */
+}
+
+
+/* Ensure the header takes full screen height */
+#header-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  /* Style the background video */
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Sends video behind the content */
+  }
+  
+  .bg-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full section */
+  }
+  
+  /* Style the content area to stay above the video */
+  .header-content {
+    position: relative;
+    z-index: 1; /* Ensure the content is above the background video */
+    height: 100%;
+  
+    padding: 20px; /* Add padding if needed */
+  }
+  
+  /* Style the navbar and banner to ensure proper layering */
+  .navbar, .banner {
+    position: relative;
+    z-index: 2; /* Ensure these elements are on top of the video */
+    background: rgba(255, 255, 255, 0); /* Transparent background */
+  }
+  
+  /* Text color for readability */
+  h1 {
+    color: white; /* Ensure text is visible over the video */
+  }
+  
+  /* Button styles */
+  .btn {
+    color: white; /* Button text color */
+  }
+  
+  /* Adjust banner container padding */
+  .banner {
+    padding-top: 100px; /* Adjust padding to position content correctly */
+  }
+  
+
+
+
+
+/* General styles for all cards */
+.feature-card {
+  background-size: cover; /* Ensures the image covers the entire card */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  border-radius: 10px; /* Adds rounded corners */
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  width: 280px; /* Set a fixed width for all cards */
+  /* height: 350px; Set a fixed height for all cards */
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-right: 16px; /* Adjust the right margin for space between cards */
+}
+
+/* Remove right margin for the last card */
+.features-container .grid-margin:last-child .feature-card {
+  margin-right: 0;
+}
+
+/* Background images for individual cards */
+.feature-card.card-1 {
+  background-image: url('../images/aiml01.png'); /* Replace with the path to the first image */
+}
+
+.feature-card.card-2 {
+  background-image: url('../images/dv06.png'); /* Replace with the path to the second image */
+}
+
+.feature-card.card-3 {
+  background-image: url('../images/iot02.png'); /* Replace with the path to the third image */
+}
+
+.feature-card.card-4 {
+  background-image: url('../images/RPA.png'); /* Replace with the path to the fourth image */
+}
+
+/* Optional: Add hover effect for zoom */
+.feature-card:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Text styling */
+.feature-card h5, .feature-card p {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Image icon styling */
+.img-icons {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.img-icons:hover {
+  transform: scale(1.1); /* Zoom effect on image hover */
+}
+
+
+
+
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.success-icon {
+  font-size: 50px;
+  color: green;
+}
+
+.ok-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.ok-button:hover {
+  background-color: darkgreen;
+}
+
+
+
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block; /* Ensure the label takes full width */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 0.5rem; /* Space between label and input */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Ensure input fields take full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+
+
+
+
+
+#navbar {
+  z-index: 1000; /* Ensure the navbar is on top of other elements */
+}
+
+.btn-contact-us button {
+  z-index: 2000; /* Ensure the Contact Us button is clickable */
+  position: relative;
+}
+
+body.sidebar-open::before {
+  background-color: transparent !important; /* Remove the dark overlay */
+}
+
+body.sidebar-open::before {
+  background-color: rgba(0, 0, 0, 0.3); /* Lighten the overlay */
+}
+
+
+@media (max-width: 768px) {
+  body.sidebar-open::before {
+    background-color: transparent !important; /* No overlay on mobile */
+  }
+}
+
+
+.btn-contact-us button {
+  z-index: 3000; /* High enough to be above other elements */
+  position: relative; /* Make sure the position is set */
+}
+
+body.sidebar-open::before {
+  pointer-events: none; /* Disable pointer events on the overlay */
+}
+
+
+
